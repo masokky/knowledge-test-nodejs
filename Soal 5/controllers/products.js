@@ -6,18 +6,10 @@ export const getAllProducts = (req, res) => {
   db.query(query, (error, result) => {
     if (error) throw error;
 
-    const response = {};
-
-    if (result.length < 1) {
-      res.status(200).json({
-        message: "Empty product",
-      });
-    } else {
-      res.status(200).json({
-        status: "success",
-        data: result,
-      });
-    }
+    res.status(200).json({
+      status: "success",
+      data: result,
+    });
   });
 };
 
