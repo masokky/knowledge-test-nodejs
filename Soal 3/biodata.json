@@ -1,0 +1,16 @@
+{
+  "name": {
+    "firstName": "Okky",
+    "lastName": "Alvianto"
+  },
+  "gender": "Male",
+  "birthdate": "18 November 1999",
+  "address": "Wonosobo, Jawa Tengah, Indonesia",
+  "email": "okkyalvianto@gmail.com",
+  "skills": ["PHP", "JavaScript", "CSS", "HTML", "Python", "Git", "Github", "MySQL", "Bootstrap", "NodeJS"],
+  "pages": {
+    "personalWeb": "https://masokky.com",
+    "github": "https://github.com/masokky",
+    "linkedin": "https://linkedin.com/in/masokky"
+  }
+}
