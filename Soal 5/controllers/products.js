@@ -63,3 +63,34 @@ export const updateProduct = (req, res) => {
     });
   }
 };
+
+export const deleteProduct = (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const queryIsExist = `SELECT product_id FROM products WHERE product_id = ${id}`;
+
+    db.query(queryIsExist, (error, result) => {
+      if (result.length == 0) {
+        return res.status(404).json({
+          status: "fail",
+          message: "Product not found",
+        });
+      } else {
+        const queryDelete = `DELETE FROM products WHERE product_id = ${id}`;
+        db.query(queryDelete, (error, result) => {
+          if (error) throw error;
+
+          res.status(200).json({
+            message: "Product has been deleted",
+          });
+        });
+      }
+    });
+  } catch (e) {
+    return res.status(404).json({
+      status: "fail",
+      message: e,
+    });
+  }
+};
