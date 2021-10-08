@@ -6,7 +6,7 @@ export const getAllProducts = (req, res) => {
   db.query(query, (error, result) => {
     if (error) throw error;
 
-    res.status(200).json({
+    return res.status(200).json({
       status: "success",
       data: result,
     });
@@ -25,12 +25,12 @@ export const addProduct = (req, res) => {
     db.query(query, (error, result) => {
       if (error) throw error;
 
-      res.status(201).json({
+      return res.status(201).json({
         message: "Products added!",
       });
     });
   } catch (e) {
-    res.status(400).json({
+    return res.status(400).json({
       message: e,
     });
   }
@@ -51,13 +51,13 @@ export const updateProduct = (req, res) => {
     db.query(query, (error, result) => {
       if (error) throw error;
 
-      res.status(200).json({
+      return res.status(200).json({
         status: "success",
         message: "Product has been updated",
       });
     });
   } catch (e) {
-    res.status(400).json({
+    return res.status(400).json({
       status: "fail",
       message: e,
     });
