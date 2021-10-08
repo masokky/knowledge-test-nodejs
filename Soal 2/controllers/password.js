@@ -22,7 +22,7 @@ export const validatePassword = (req, res) => {
           message: "Login berhasil!",
         });
       } else {
-        res.status(403).json({
+        res.status(401).json({
           message: "Password salah!",
         });
       }
