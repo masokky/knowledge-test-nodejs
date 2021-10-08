@@ -1,0 +1,29 @@
+{
+  "name": "knowledtest-node-js",
+  "version": "1.0.0",
+  "description": "Knowledge Test Backend Developer (NodeJS)",
+  "main": "index.js",
+  "type": "module",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masokky/knowledge-test-nodejs.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "masokky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masokky/knowledge-test-nodejs/issues"
+  },
+  "homepage": "https://github.com/masokky/knowledge-test-nodejs#readme"
+}
