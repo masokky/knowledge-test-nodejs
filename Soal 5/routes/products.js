@@ -1,9 +1,9 @@
 import express from "express";
-import { getAllProducts } from "../controllers/products.js";
+import { addProduct, getAllProducts } from "../controllers/products.js";
 const router = express.Router();
 
 router.get("/", getAllProducts);
-router.post("/", (req, res) => res.send("Router POST Products"));
+router.post("/", addProduct);
 router.patch("/", (req, res) => res.send("Router PATCH Products"));
 router.delete("/", (req, res) => res.send("Router DELETE Products"));
 
